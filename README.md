@@ -1,4 +1,4 @@
-# Egypt_price_Reference_table
+# Egypt price Reference table
 
 | 商品大类   | 商品                                     | 价格区间       |
 |------------|------------------------------------------|--------------|
