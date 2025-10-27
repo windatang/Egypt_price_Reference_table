@@ -1,0 +1,379 @@
+  <!doctype html>
+  <html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SDI 潜水课程｜入门到进阶·涵盖 6 个专长</title>
+    <meta name="description" content="SDI 潜水从入门到进阶，涵盖 6 个专长。1v1/1v2 小班、系统训练、严谨出证流程。" />
+    <style>
+      :root{
+        --brand:#0B7CFF;
+        --bg:#0b1020;
+        --card:#0f1530;
+        --text:#f5f7ff;
+        --muted:#b9c0d4;
+        --accent:#31e1ff;
+        --ok:#20c997;
+        --warn:#ffb020;
+        --paper:#ffffff;
+      }
+      *{box-sizing:border-box}
+      body{
+        margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+        color:var(--text); background:
+          linear-gradient(180deg, rgba(7,12,28,0.85) 0%, rgba(7,12,28,0.95) 100%),
+          url('diving-bg.jpg') center/cover no-repeat fixed;
+        background-attachment: fixed;
+      }
+      .wrap{max-width:1080px;margin:0 auto;padding:16px}
+      .hero{
+        position:relative; border-radius:16px; overflow:hidden; background:
+        radial-gradient(1200px 600px at 80% 20%, rgba(49,225,255,0.12), transparent 60%),
+        radial-gradient(900px 500px at 10% 90%, rgba(11,124,255,0.12), transparent 60%),
+        linear-gradient(180deg,#0c1635,#081027 60%,#070c1c);
+        padding:24px; border:1px solid rgba(255,255,255,0.08);
+      }
+      .brandbar{
+        display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px
+      }
+      .logo{display:flex; align-items:center; gap:10px}
+      .logo img{height:28px; width:auto; display:block; filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+      .contact{font-size:13px; color:#dbe7ff}
+      .grid{display:grid; gap:16px}
+      @media(min-width:900px){ .grid-2{grid-template-columns:1.1fr .9fr} }
+      .eyebrow{color:var(--accent); letter-spacing:.08em; font-weight:600; font-size:12px}
+      h1{margin:.2em 0 .6em; font-size:28px; line-height:1.25}
+      .lead{color:var(--muted); font-size:14px; line-height:1.6}
+      .badge{
+        display:inline-block; padding:6px 10px; border:1px solid rgba(255,255,255,.12);
+        border-radius:999px; font-size:12px; color:#d7e3ff; margin-right:8px; margin-top:8px
+      }
+      .badge.warn{ border-color:rgba(255,176,32,.45); color:#ffe2b0; background:rgba(255,176,32,.12) }
+      .panel{
+        background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08);
+        border-radius:12px; padding:14px; margin-top:12px
+      }
+      .h2{font-size:18px; margin:22px 0 10px}
+      ul{margin:8px 0 0 1em; padding:0}
+      li{margin:6px 0; color:#e7ecff; line-height:1.6}
+      .muted{color:var(--muted)}
+      .price{
+        display:flex; gap:12px; flex-wrap:wrap; margin-top:8px
+      }
+      .pill{
+        background:rgba(11,124,255,0.12); color:#d9e8ff; border:1px solid rgba(11,124,255,0.35);
+        border-radius:10px; padding:10px 12px; font-weight:600; font-size:14px
+      }
+      .section{
+        margin-top:22px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06);
+        border-radius:16px; padding:18px
+      }
+      .cta{
+        display:flex; gap:10px; flex-wrap:wrap; margin-top:16px
+      }
+      .btn{
+        background:var(--brand); color:#fff; padding:12px 16px; border:none; border-radius:10px; font-weight:700; cursor:pointer
+      }
+      .btn.outline{
+        background:transparent; border:1px solid rgba(255,255,255,0.25)
+      }
+      .kicker{font-size:12px; color:#a9b4cf}
+      .footer{ display:none !important; }
+      .hr{height:1px; background:rgba(255,255,255,0.08); margin:14px 0}
+      .tag{display:inline-block; padding:4px 8px; border-radius:6px; background:rgba(32,201,151,.12); color:#9ff4d6; font-size:12px; border:1px solid rgba(32,201,151,.4)}
+      .note{font-size:12px; color:#a9b4cf}
+      .cols{display:grid; gap:12px}
+      @media(min-width:800px){ .cols-3{grid-template-columns:1fr 1fr 1fr} }
+      .card{background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px}
+      /* Tabs */
+      .tabs{
+        display:flex; gap:8px; margin-top:18px; flex-wrap:nowrap; overflow:auto; scrollbar-width:none
+      }
+      .tabs::-webkit-scrollbar{display:none}
+      .tab{
+        padding:10px 14px; border-radius:10px; cursor:pointer; font-weight:700; font-size:14px; white-space:nowrap;
+        border:1px solid rgba(255,255,255,0.18); color:#cfe0ff; background:rgba(255,255,255,0.03)
+      }
+      .tab.active{
+        color:#fff; border-color:rgba(11,124,255,0.6);
+        background:linear-gradient(180deg, rgba(11,124,255,0.25), rgba(11,124,255,0.08))
+      }
+      .tabpanes{margin-top:12px}
+      .tabpane{display:none}
+      .tabpane.active{display:block}
+      /* Q&A section */
+      .qa{margin-top:22px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06); border-radius:16px; padding:18px}
+      .qa h2{font-size:18px; margin:0 0 10px}
+      .qa dt{font-weight:700; color:#eaf0ff; margin-top:10px}
+      .qa dd{margin:6px 0 12px 0; color:#cdd7f1; line-height:1.7}
+      /* Poster block */
+      .poster{
+        margin-top:24px; border-radius:16px; overflow:hidden;
+        background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06);
+      }
+      .poster img{ display:block; width:100%; height:auto; }
+      .poster .cap{
+        padding:10px 12px; font-size:12px; color:#a9b4cf; text-align:center;
+        border-top:1px solid rgba(255,255,255,0.06);
+      }
+
+      /* 打印优化：浅色模式，白底黑字，海报分页 */
+      @media print{
+        html, body{ background:#fff !important; color:#000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        body{ background-image:none !important; }
+        .hero{ border:1px solid #ccc !important; background:#fff !important; page-break-inside: avoid; }
+        .tabs, .cta, .kicker { display:none !important; }
+        .tabpane{ display:none !important; }
+        .tabpane.active{ display:block !important; }
+        .card, .panel, .section, .qa, .poster{ border-color:#ccc !important; background:#fff !important; }
+        .badge{ border-color:#bbb !important; color:#222 !important; background:#fff !important; }
+        .lead{ color:#222 !important; }
+        .muted, .contact{ color:#444 !important; }
+        .poster{ page-break-before: always; page-break-after: avoid; }
+        .logo img{ background:#fff !important; border-radius:4px; padding:2px }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <div class="brandbar">
+          <div class="logo">
+            <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/122203596/6raCnyyiy5yn4sxS.jpeg?Expires=1762683504&Signature=HJ59qdCWA4JFhy-o7-DPuln7Pv3sDMRmz4ypKkTtkaSMN6H1nFS15NXQAlkqT1qv4IF9VoSOBlDvB7dxxKfxRr1y6g1UK9EDlVSXBXY5jlKKj3u7eCj4c1GY1i1Ds1dp91s16AM7NmWGGjasDP2xXLVeb1tpaNw6wJZM3B2So6okd47qWDIC7CBGQhzmeDbqSZiBJ7cCwB21w3lgv-cY7shCopEeL5xyeEMH1y-8Nf03uPb7dl4h22WdF0LfpIfvIWhOwOBZzS-86O4JEIfNLaOaejHSwjIOutgvDjpDVdig4OhgTphsZ3xetFOM8si5dJ2dusyECGwHS2T~Ttqdfg__&Key-Pair-Id=K3USGZIKWMDCSX" alt="SDI Logo" />
+            <span class="eyebrow">SDI 国际水肺潜水</span>
+          </div>
+          <div class="contact">微信：<strong>winda tang</strong></div>
+        </div>
+
+        <div class="grid grid-2">
+          <div>
+            <h1>SDI 潜水从入门到进阶 · 涵盖 6 个专长</h1>
+            <p class="lead">1v1 / 1v2 小班教学，系统化训练，严谨出证。深潜至 40m、夜潜、导航与高氧覆盖实战场景。</p>
+            <div>
+              <span class="badge">小班教学</span>
+              <span class="badge">考证刷瓶</span>
+              <span class="badge">专长证书</span>
+              <span class="badge">入门到进阶潜水</span>
+              <span class="badge warn">需会游泳 · 14 岁以上可报名</span>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="tag">课程总览海报</div>
+            <ul>
+              <li>SDI 开放水域潜水员（OW）</li>
+              <li>SDI 深潜（至 40m）</li>
+              <li>SDI 夜潜</li>
+              <li>SDI 水下导航</li>
+              <li>SDI 电脑表高氧</li>
+              <li>SDI 进阶潜水员 或 SDI 高级潜水员</li>
+            </ul>
+            <div class="hr"></div>
+            <ul class="muted">
+              <li>教学特点：1v1 / 1v2、小班面授、泳池不限时、专长内容前置</li>
+              <li>赠送：SDI T-shirt、面镜带、开放水域 & 进阶探险纸质教材</li>
+              <li>额外授课：进阶浮力控制；方向 4 选 1（放流/录像/船潜/沙滩海岸）</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs" role="tablist" aria-label="课程方案">
+          <button class="tab active" role="tab" aria-selected="true" aria-controls="pane-main" id="tab-main">主套餐｜入门到进阶（含 6 专长）</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="pane-upgrade" id="tab-upgrade">单升级 A</button>
+        </div>
+
+        <div class="tabpanes">
+          <!-- 主套餐 -->
+          <div id="pane-main" class="tabpane active" role="tabpanel" aria-labelledby="tab-main">
+            <div class="section" id="details">
+              <div class="h2">包含课程与对应证书（通过评估后可申请）</div>
+              <div class="cols cols-3">
+                <div class="card"><strong>OW 开放水域</strong><br><span class="muted">入门技能与安全程序</span></div>
+                <div class="card"><strong>深潜（至 40m）</strong><br><span class="muted">深度规划与气体管理</span></div>
+                <div class="card"><strong>夜潜</strong><br><span class="muted">夜间信号与同伴协作</span></div>
+                <div class="card"><strong>水下导航</strong><br><span class="muted">自然与罗盘导航</span></div>
+                <div class="card"><strong>电脑表高氧</strong><br><span class="muted">富氧气体基础与表设定</span></div>
+                <div class="card"><strong>进阶或高级</strong><br><span class="muted">满足记录要求后评估出证</span></div>
+              </div>
+
+              <div class="h2">行程与训练安排（主套餐）</div>
+              <ul>
+                <li>行程：8天7晚，或 7天6晚＋上海泳池课/理论课（时间可选）</li>
+                <li>训练安排：共计约 25 潜（以海况与教学评估为准）</li>
+                <li>课程福利：含 4 瓶高氧</li>
+                <li>证书形式：实体证书，按 SDI 官方流程出证</li>
+              </ul>
+
+              <div class="panel">
+                <div class="h2">价格与师生比（主套餐）</div>
+                <div class="price">
+                  <div class="pill">1v1 + 单人大床房：15,000 RMB（含早）</div>
+                  <div class="pill">1v2 + 标间合住：12,500 RMB（含早）</div>
+                </div>
+                <p class="note">可按需加潜、加天与升级房型。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 单升级 A -->
+          <div id="pane-upgrade" class="tabpane" role="tabpanel" aria-labelledby="tab-upgrade">
+            <div class="section">
+              <div class="h2">单升级 A（进阶潜水员 + 6 个专长）</div>
+
+              <div class="h2">包含课程与对应证书（通过评估后可申请）</div>
+              <div class="cols cols-3">
+                <div class="card"><strong>进阶潜水员 或 高级潜水员</strong><br><span class="muted">满足 25+/50+ 记录要求后评估出证</span></div>
+                <div class="card"><strong>深潜（至 40m）</strong><br><span class="muted">深度规划与气体管理</span></div>
+                <div class="card"><strong>夜潜</strong><br><span class="muted">夜间信号与同伴协作</span></div>
+                <div class="card"><strong>水下导航</strong><br><span class="muted">自然与罗盘导航</span></div>
+                <div class="card"><strong>电脑表高氧</strong><br><span class="muted">富氧气体基础与表设定</span></div>
+                <div class="card"><strong>专长补强</strong><br><span class="muted">进阶浮力控制＋方向4选1</span></div>
+              </div>
+
+              <div class="h2">行程与训练安排（单升级 A）</div>
+              <ul>
+                <li>路线：SDI 进阶潜水员（25+ 记录）或 SDI 高级潜水员（50+ 记录）</li>
+                <li>训练安排：共 16 潜（含课程 8 潜）</li>
+                <li>课程福利：1 瓶高氧；证书完成相应培训并通过评估后发放（共 5 张）</li>
+                <li>赠送：SDI T-shirt、面镜带、进阶探险纸质教材</li>
+                <li>可按需加潜、加天、升级房型</li>
+              </ul>
+
+              <div class="panel">
+                <div class="h2">价格与师生比（单升级 A）</div>
+                <div class="price">
+                  <div class="pill">1v1：6天5晚 8,300 RMB（或 5天4晚 8,000 RMB）含早</div>
+                  <div class="pill">1v2：6天5晚 6,900 RMB（或 5天4晚 6,800 RMB）含早</div>
+                </div>
+                <p class="note">房型：1v1 单人大床房；1v2 标间合住。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 亮点与费用 -->
+      <section class="section" aria-label="课程亮点与不含费用">
+        <div class="h2">课程亮点</div>
+        <div class="cols cols-3">
+          <div class="card"><strong>小班教学</strong><br><span class="muted">1v1 / 1v2 深度陪练，泳池不限时</span></div>
+          <div class="card"><strong>考证刷瓶</strong><br><span class="muted">系统化安排，逐步建立自信与手感</span></div>
+          <div class="card"><strong>专长证书</strong><br><span class="muted">深潜、夜潜、导航、高氧等 6 项</span></div>
+          <div class="card"><strong>入门到进阶潜水</strong><br><span class="muted">从 OW 到进阶/高级的完整路径</span></div>
+          <div class="card"><strong>安全与评估</strong><br><span class="muted">严格按 SDI 标准，达标后方可出证</span></div>
+          <div class="card"><strong>灵活行程</strong><br><span class="muted">可选择 8天7晚或沪上分段学习</span></div>
+        </div>
+
+        <div class="h2">适合与不适合</div>
+        <div class="cols cols-3">
+          <div class="card">
+            <strong>适合人群</strong>
+            <ul>
+              <li>希望扎实打底、长期潜水的学员</li>
+              <li>倾向小班、充分练习时间的人</li>
+              <li>目标 40m 深潜或夜潜等专长的人</li>
+            </ul>
+          </div>
+          <div class="card">
+            <strong>暂不适合</strong>
+            <ul>
+              <li>仅想“打卡式”快速拿证</li>
+              <li>无法配合基本安全要求与作息</li>
+              <li>对海况变化完全无法接受</li>
+            </ul>
+          </div>
+          <div class="card">
+            <strong>报名须知</strong>
+            <ul>
+              <li>需具备基本会游泳能力（建议能连续游/漂浮 200 米，掌握踩水/漂浮基本技能）</li>
+              <li>接受 14 岁及以上青少年报名，未成年人需监护人书面同意与签署健康声明</li>
+              <li>需按要求提交健康申明与资料，并遵守教练安排与潜伴协作规范</li>
+              <li>海况以实际为准，行程可能微调</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="h2">费用说明</div>
+        <div class="cols cols-3">
+          <div class="card">
+            <strong>费用包含（示例）</strong>
+            <ul>
+              <li>课程教学费与出证流程服务</li>
+              <li>教学用气与高氧（按各方案说明）</li>
+              <li>教材与训练记录（纸质/电子）</li>
+              <li>指定住宿与早餐（见各方案）</li>
+            </ul>
+          </div>
+          <div class="card">
+            <strong>费用不含（示例）</strong>
+            <ul>
+              <li>往返机票、签证与个人旅行证件</li>
+              <li>潜点间交通、餐饮与个人消费</li>
+              <li>个人装备购置与自选升级</li>
+              <li>保险（建议自行购买潜水险）</li>
+            </ul>
+          </div>
+          <div class="card">
+            <strong>装备与出行提示</strong>
+            <ul>
+              <li>自带合脚面镜与个人基础装备更舒适</li>
+              <li>建议携带防寒衣物与防晒用品</li>
+              <li>电脑表设定与高氧使用遵循培训规范</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="note">以上为示例条目，可按你的正式“包含/不含”明细替换。我可帮你统一措辞、核对逻辑与排版。</p>
+      </section>
+
+      <!-- Q&A -->
+      <section class="qa" aria-label="常见问答 Q&A">
+        <h2>常见问答 Q&A</h2>
+        <dl>
+          <dt>进阶与高级如何选择？</dt>
+          <dd>满足 50+ 记录可申请高级；25+ 记录建议先进阶。</dd>
+
+          <dt>深潜可至 40 米吗？</dt>
+          <dd>完成深潜培训并通过评估后可获 40m 深潜资格。</dd>
+
+          <dt>如何选择行程？</dt>
+          <dd>在沪可分段学习更灵活；沉浸式建议 8天7晚。</dd>
+
+          <dt>费用是否含签证？</dt>
+          <dd>不含；其余以报名须知为准。</dd>
+
+          <dt>出证方式与时间？</dt>
+          <dd>实体证书；按 SDI 官方流程与时间安排为准。</dd>
+        </dl>
+      </section>
+
+      <!-- 海报图片 -->
+      <section class="poster" aria-label="SDI 海报图">
+        <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/122203596/DF6niJ0A5kvnurX3.jpeg?Expires=1762683375&Signature=EfJZ-Zvg8kumR8qw2zZzcYRDIZnL~aTlC0Lll7488Mh2kSKT7bRIZ4MWN33T38Ozn6VI9Mk~B4YRkU3tl5yhlu9dTgVqRdkqkAC5zDHhyCYC6DxGdKTYGkPDdOd5Ii2aFCcyiLGRHrzYR77DIyKv6nh3i9l88sBVIdHoZ8b9rjvoPMzfS4iXoZbVJTjzSuSdpd-LOV~UV~NGiWGhiOuBjXu-Y9ctqJEuYY81GLsqZ6Ux6ck87CfRRayJYfz8IlpT3cuYPE9ZZJmrrJDJklPDwXNm8CoqEdT4WZmUBZ0wL3FhdDsmiRgL0f5fvUu4LO00byBG0VZnQHKEXydUzHDvVg__&Key-Pair-Id=K3USGZIKWMDCSX" alt="SDI 课程路径海报" />
+        <div class="cap">SDI 官方课程路径示意图（仅供参考）。</div>
+      </section>
+    </div>
+
+    <script>
+      // Tab 交互
+      const tabs = document.querySelectorAll('.tab');
+      const panes = document.querySelectorAll('.tabpane');
+      tabs.forEach(tab=>{
+        tab.addEventListener('click', ()=>{
+          tabs.forEach(t=>{ t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+          panes.forEach(p=>p.classList.remove('active'));
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected','true');
+          const paneId = tab.getAttribute('aria-controls');
+          document.getElementById(paneId).classList.add('active');
+          tab.scrollIntoView({behavior:'smooth', inline:'nearest', block:'nearest'});
+        });
+        tab.addEventListener('keydown', (e)=>{
+          const idx = Array.from(tabs).indexOf(tab);
+          if(e.key==='ArrowRight'){ tabs[(idx+1)%tabs.length].focus(); }
+          if(e.key==='ArrowLeft'){ tabs[(idx-1+tabs.length)%tabs.length].focus(); }
+        });
+      });
+    </script>
+  </body>
+  </html>
